@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-Before you start, you'll need to have [PNPM](https://pnpm.io/) installed on your machine.
+Before you start, you'll need to have [PNPM](https://pnpm.io/) installed on your machine, and [Node.js](https://nodejs.org/en/download).
 
 Here are the steps to set up the project:
 
