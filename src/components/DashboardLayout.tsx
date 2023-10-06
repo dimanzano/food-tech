@@ -12,47 +12,23 @@ import {
   ListItemIcon,
   ListItemText,
   Toolbar,
-  Chip,
-  Menu,
-  MenuItem,
+
 } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
 import { drawerItems } from "../drawerItems";
 import { useNavLink } from "../hooks/useNavLink";
 import { useIsMobile } from "../hooks/useIsMobile";
-import FaceIcon from "@mui/icons-material/Face";
-import { useEffect } from "react";
+import { FoodTechLogo } from "./FoodTechLogo";
 
 const drawerWidth = 280;
-type User = {
-  id: number;
-  username: string;
-};
 
 export function DashboardLayout() {
   const isMobile = useIsMobile();
   const [drawerOpen, setDrawerOpen] = React.useState(false);
-  const [user, setUser] = React.useState<User | null>(null);
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
 
   const handleDrawerToggle = () => {
     setDrawerOpen((prev) => !prev);
-  };
-
-  const getUser = async () => {
-    const response = await fetch("/api/auth/me");
-    if (response.ok) {
-      const userData: User = await response.json();
-      setUser(userData);
-    }
-  };
-
-  const handleChipClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
   };
 
   React.useEffect(() => {
@@ -60,11 +36,6 @@ export function DashboardLayout() {
       setDrawerOpen(false);
     }
   }, [isMobile]);
-
-  useEffect(() => {
-    getUser();
-  }, []);
-
 
   return (
     <Box display="flex" height="100vh" flexDirection="column">
@@ -99,26 +70,11 @@ export function DashboardLayout() {
                 py: 1,
               }}
             >
+                <FoodTechLogo />
             </Box>
             <Box flexGrow={1} />
-            {user && (
-              <div>
-                <Chip
-                  icon={<FaceIcon />}
-                  label={user.username}
-                  onClick={handleChipClick}
-                  variant="outlined"
-                />
-                <Menu
-                  id="user-menu"
-                  anchorEl={anchorEl}
-                  open={Boolean(anchorEl)}
-                  onClose={handleMenuClose}
-                >
-                  <MenuItem >{"logout"}</MenuItem>
-                </Menu>
-              </div>
-            )}
+           
+            
           </Toolbar>
         </AppBar>
         <Toolbar />
