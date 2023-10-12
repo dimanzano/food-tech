@@ -4,6 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import {
   AppBar,
   Box,
+  Button,
   Drawer,
   IconButton,
   List,
@@ -14,7 +15,7 @@ import {
   Toolbar,
 
 } from "@mui/material";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { drawerItems } from "../drawerItems";
 import { useNavLink } from "../hooks/useNavLink";
 import { useIsMobile } from "../hooks/useIsMobile";
@@ -25,7 +26,7 @@ const drawerWidth = 280;
 export function DashboardLayout() {
   const isMobile = useIsMobile();
   const [drawerOpen, setDrawerOpen] = React.useState(false);
-
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setDrawerOpen((prev) => !prev);
@@ -36,6 +37,10 @@ export function DashboardLayout() {
       setDrawerOpen(false);
     }
   }, [isMobile]);
+
+  function info(){
+    navigate("/info")
+  }
 
   return (
     <Box display="flex" height="100vh" flexDirection="column">
@@ -70,12 +75,16 @@ export function DashboardLayout() {
                 py: 1,
               }}
             >
-                <FoodTechLogo />
+                <FoodTechLogo /> 
             </Box>
             <Box flexGrow={1} />
-           
+            <Button onClick={info}>
+              More info
+            </Button>
+
             
           </Toolbar>
+
         </AppBar>
         <Toolbar />
         <Box flexGrow={1} display="flex">
