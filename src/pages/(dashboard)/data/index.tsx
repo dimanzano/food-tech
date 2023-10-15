@@ -104,8 +104,11 @@ export default function DataPage() {
   };
 
   const handleBack = () => {
-    if (activeStep === 0 && subStep === 1) {
-      setSubStep(0); 
+    if (activeStep === 1) {
+      setActiveStep((prevActiveStep) => prevActiveStep - 1);
+      setSubStep(1); 
+    } else if (activeStep === 0 && subStep === 1) {
+      setSubStep(0);
     } else {
       setActiveStep((prevActiveStep) => prevActiveStep - 1);
     }
