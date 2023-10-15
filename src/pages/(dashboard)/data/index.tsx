@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Box, Button, Step, StepLabel, Stepper, TextField, Typography } from "@mui/material";
+import { Box, Button, Step, StepLabel, Stepper, Typography } from "@mui/material";
 import Start from "../../../components/Test/Start";
 import Food1 from "../../../components/Test/Food1";
+import Start2 from "../../../components/Test2/Start2";
 
 interface StepProps {
   activeStep: number;
@@ -52,34 +53,52 @@ const StepOneB: React.FC<StepProps> = ({ activeStep, handleNext, handleBack }) =
   );
 };
 
-const StepTwo: React.FC<StepProps> = ({ activeStep, handleNext, handleBack }) => {
+const StepTwoA: React.FC<StepProps> = ({ activeStep, handleNext, handleBack }) => {
   if (activeStep !== 1) return null;
 
   return (
     <Box marginTop={2} marginBottom={2}>
-      <Typography variant='h5'>Step Two</Typography>
-      <TextField label="Field 2" />
-      <Button onClick={handleBack}>Back</Button>
-      <Button onClick={handleNext}>Next</Button>
+      <Start2/>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        paddingTop={2}
+        gap={2}
+      >
+        <Button onClick={handleBack}>Back</Button>
+      <Button variant="contained" onClick={handleNext}>Start</Button>
+      </Box>
     </Box>
   );
 };
 
-const StepThree: React.FC<StepProps> = ({ activeStep, handleNext, handleBack }) => {
-  if (activeStep !== 2) return null;
+const StepTwoB: React.FC<StepProps> = ({ activeStep, handleNext, handleBack }) => {
+  if (activeStep !== 1) return null;
 
   return (
     <Box marginTop={2} marginBottom={2}>
-      <Typography variant='h5'>Step Three</Typography>
-      <TextField label="Field 3" />
-      <Button onClick={handleBack}>Back</Button>
-      <Button onClick={handleNext}>Finish</Button>
+      <Start2/>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        paddingTop={2}
+        gap={2}
+      >
+        <Button onClick={handleBack}>Back</Button>
+      <Button variant="contained" onClick={handleNext}>Next</Button>
+      </Box>
     </Box>
   );
 };
 
 const Restart: React.FC<StepProps> = ({ activeStep, handleReset }) => {
-  if (activeStep !== 3) return null;
+  if (activeStep !== 2) return null;
 
   return (
     <Box marginTop={2} marginBottom={2}>
@@ -89,30 +108,38 @@ const Restart: React.FC<StepProps> = ({ activeStep, handleReset }) => {
   );
 };
 
-const steps = ['One', 'Two', 'Three', 'Restart'];
+const steps = ['Stage One', 'Stage Two','Restart'];
 
 export default function DataPage() {
   const [activeStep, setActiveStep] = useState(0);
   const [subStep, setSubStep] = useState(0); 
   const handleNext = () => {
     if (activeStep === 0 && subStep === 0) {
-      setSubStep(1); 
-    } else {
+      setSubStep(1); // Go to StepOneB
+    } else if (activeStep === 0 && subStep === 1) {
       setActiveStep((prevActiveStep) => prevActiveStep + 1);
-      setSubStep(0); 
+      setSubStep(0); // Go to StepTwoA
+    } else if (activeStep === 1 && subStep === 0) {
+      setSubStep(1); // Go to StepTwoB
+    } else if (activeStep === 1 && subStep === 1) {
+      setActiveStep((prevActiveStep) => prevActiveStep + 1);
+      setSubStep(0); // Go to Restart
     }
   };
 
   const handleBack = () => {
-    if (activeStep === 1) {
+    if (activeStep === 0 && subStep === 1) {
+      setSubStep(0); // Go back to StepOneA
+    } else if (activeStep === 1 && subStep === 1) {
+      setSubStep(0); // Go back to StepTwoA
+    } else if (activeStep === 1 && subStep === 0) {
       setActiveStep((prevActiveStep) => prevActiveStep - 1);
-      setSubStep(1); 
-    } else if (activeStep === 0 && subStep === 1) {
-      setSubStep(0);
+      setSubStep(1); // Go back to StepOneB
     } else {
       setActiveStep((prevActiveStep) => prevActiveStep - 1);
     }
   };
+  
 
   const handleReset = () => {
     setActiveStep(0);
@@ -130,18 +157,18 @@ export default function DataPage() {
         })}
       </Stepper>
       <Box 
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-      >
-        {subStep === 0 && <StepOneA activeStep={activeStep} handleNext={handleNext} handleBack={handleBack} handleReset={handleReset}/>}
-        {subStep === 1 && <StepOneB activeStep={activeStep} handleNext={handleNext} handleBack={handleBack} handleReset={handleReset}/>}
-        <StepTwo activeStep={activeStep} handleNext={handleNext} handleBack={handleBack} handleReset={handleReset}/>
-        <StepThree activeStep={activeStep} handleNext={handleNext} handleBack={handleBack} handleReset={handleReset}/>
-        <Restart activeStep={activeStep} handleReset={handleReset} />
-      </Box>
+  sx={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }}
+>
+  {activeStep === 0 && subStep === 0 && <StepOneA activeStep={activeStep} handleNext={handleNext} handleReset={handleReset}/>}
+  {activeStep === 0 && subStep === 1 && <StepOneB activeStep={activeStep} handleNext={handleNext} handleBack={handleBack} handleReset={handleReset}/>}
+  {activeStep === 1 && subStep === 0 && <StepTwoA activeStep={activeStep} handleNext={handleNext} handleBack={handleBack} handleReset={handleReset}/>}
+  {activeStep === 1 && subStep === 1 && <StepTwoB activeStep={activeStep} handleNext={handleNext} handleBack={handleBack} handleReset={handleReset}/>}
+  {activeStep === 2 && <Restart activeStep={activeStep} handleReset={handleReset} />}
+</Box>
     </Box>
   );
 }
