@@ -13,7 +13,6 @@ import {
   ListItemIcon,
   ListItemText,
   Toolbar,
-
 } from "@mui/material";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { drawerItems } from "../drawerItems";
@@ -38,8 +37,8 @@ export function DashboardLayout() {
     }
   }, [isMobile]);
 
-  function info(){
-    navigate("/info")
+  function info() {
+    navigate("/info");
   }
 
   return (
@@ -75,16 +74,11 @@ export function DashboardLayout() {
                 py: 1,
               }}
             >
-                <FoodTechLogo /> 
+              <FoodTechLogo />
             </Box>
             <Box flexGrow={1} />
-            <Button onClick={info}>
-              More info
-            </Button>
-
-            
+            <Button onClick={info}>More info</Button>
           </Toolbar>
-
         </AppBar>
         <Toolbar />
         <Box flexGrow={1} display="flex">
