@@ -74,91 +74,35 @@ export default function InfoPage() {
         </Box>
       </Box>
 
-      <Box id="how-it-works" sx={{ p: 4, backgroundColor: "grey.200" }}>
-        <Typography variant="h4">How It Works</Typography>
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ipsam?
-          it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam? it
-          amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam? it amet
-          consectetur adipisicing elit. Quos, ipsam? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, ipsam? it amet consectetur adipisicing elit.
-          Quos, ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-          ipsam? it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam?
-          it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam? it
-          amet consectetur adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, ipsam? it amet consectetur adipisicing elit.
-          Quos, ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-          ipsam? it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam?
-          it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam? it
-          amet consectetur adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, ipsam? it amet consectetur adipisicing elit.
-          Quos, ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-          ipsam? it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam?
-          it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam? it
-          amet consectetur adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, ipsam? it amet consectetur adipisicing elit.
-          Quos, ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-          ipsam? it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam?
-          it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam? it
-          amet consectetur adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, ipsam? it amet consectetur adipisicing elit.
-          Quos, ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-          ipsam? it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam?
-          it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam? it
-          amet consectetur adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, ipsam? it amet consectetur adipisicing elit.
-          Quos, ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-          ipsam? it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam?
-          it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam? it
-          amet consectetur adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam? Quos, ipsam? it amet consectetur
-          adipisicing elit. Quos, ipsam?Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, ipsam? it amet consectetur adipisicing elit.
-          Quos, ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam? Quos, ipsam? it amet consectetur adipisicing elit. Quos,
-          ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-          ipsam? it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam?
-          it amet consectetur adipisicing elit. Quos, ipsam? Quos, ipsam? it
-          amet consectetur adipisicing elit. Quos, ipsam?
+      <Box
+        id="how-it-works"
+        sx={{
+          p: 4,
+          backgroundColor: "grey.200",
+          paddingX: "80px",
+        }}
+      >
+        <Box textAlign="center" marginBottom={2}>
+          <Typography variant="h4">How It Works</Typography>
+        </Box>
+
+        <Typography variant="body2">
+          Lorem ipsum dolor sit amet consectetur. Potenti nunc ultricies
+          pharetra fames consequat. Gravida penatibus sagittis fermentum eu
+          egestas at id tristique. In phasellus pharetra fames nunc purus diam
+          porttitor. Lectus erat in rhoncus parturient proin. Ultrices turpis in
+          risus lacus mattis arcu amet in.
         </Typography>
+
+        <Box>
+          <Typography>
+            <ul>
+              <li>Bullet point 1</li>
+              <li>Bullet point 2</li>
+              <li>Bullet point 3</li>
+            </ul>
+          </Typography>
+        </Box>
       </Box>
 
       <Box id="contact" sx={{ p: 4, backgroundColor: "grey.100" }}>
