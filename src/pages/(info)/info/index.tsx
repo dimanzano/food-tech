@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import UpperBarSection from "../../../components/info/UpperBarSection";
 import TuneIcon from "@mui/icons-material/Tune";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
@@ -103,13 +103,62 @@ export default function InfoPage() {
             </ul>
           </Typography>
         </Box>
+
+        <Typography variant="body2">
+          Lorem ipsum dolor sit amet consectetur. Potenti nunc ultricies
+          pharetra fames consequat. Gravida penatibus sagittis fermentum eu
+          egestas at id tristique. In phasellus pharetra fames nunc purus diam
+          porttitor. Lectus erat in rhoncus parturient proin. Ultrices turpis in
+          risus lacus mattis arcu amet in.
+        </Typography>
       </Box>
 
-      <Box id="contact" sx={{ p: 4, backgroundColor: "grey.100" }}>
-        <Typography variant="h4">Contact</Typography>
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ipsam?
-        </Typography>
+      <Box id="contact" sx={{ display: "flex" }}>
+        <Box sx={{ width: "35%", backgroundColor: "rgb(202, 65, 56)" }}>
+          <Typography
+            variant="h2"
+            margin={4}
+            color={"white"}
+            fontWeight={"bold"}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </Typography>
+        </Box>
+
+        {/* Form Section */}
+        <Box sx={{ width: "50%", p: 3, margin: 5 }} justifyContent={"center"}>
+          <Box
+            component="form"
+            sx={{
+              width: "100%",
+
+              "& .MuiTextField-root": { m: 1.5, width: "30ch" },
+            }}
+          >
+            <div>
+              <TextField
+                id="first-name"
+                variant="standard"
+                label="First Name"
+              />
+
+              <TextField id="last-name" variant="standard" label="Last Name" />
+
+              <TextField id="email" variant="standard" label="Email" />
+
+              <TextField id="phone" variant="standard" label="Phone" />
+            </div>
+          </Box>
+          <Box m={1.5}>
+            <TextField
+              id="message"
+              label="Message"
+              multiline
+              rows={6}
+              sx={{ width: "100%" }}
+            />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
