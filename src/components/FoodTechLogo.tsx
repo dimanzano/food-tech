@@ -1,4 +1,8 @@
-export function FoodTechLogo() {
+interface FoodTechLogoProps {
+  fill: string;
+}
+
+export function FoodTechLogo({ fill }: FoodTechLogoProps) {
   return (
     <svg
       version="1.0"
@@ -7,6 +11,7 @@ export function FoodTechLogo() {
       height="40"
       viewBox="0 0 1342.000000 372.000000"
       preserveAspectRatio="xMidYMid meet"
+      fill={fill}
     >
       <g
         transform="translate(0.000000,372.000000) scale(0.100000,-0.100000)"

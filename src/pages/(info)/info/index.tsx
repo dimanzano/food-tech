@@ -3,6 +3,7 @@ import UpperBarSection from "../../../components/info/UpperBarSection";
 import TuneIcon from "@mui/icons-material/Tune";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import Footer from "../../../components/info/Footer";
 
 export default function InfoPage() {
   return (
@@ -160,6 +161,8 @@ export default function InfoPage() {
           </Box>
         </Box>
       </Box>
+
+      <Footer />
     </Box>
   );
 }
