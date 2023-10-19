@@ -6,11 +6,11 @@ import {
   CardMedia,
 } from "@mui/material";
 
-export default function Food1() {
+export default function Food2() {
   return (
     <Card
       sx={{ width: 650, height: 400, padding: 7 }}
-      style={{ backgroundColor: "rgb(0,0,3)" }}
+      style={{ backgroundColor: "rgb(32,32,32 )" }}
     >
       <CardMedia
         component="img"
