@@ -9,7 +9,6 @@ export type Path =
   | `/info`
   | `/login`
   | `/memberships`
-  | `/pepe`
   | `/restaurants`
   | `/signup`
 
