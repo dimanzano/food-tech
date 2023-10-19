@@ -74,7 +74,7 @@ export function DashboardLayout() {
                 py: 1,
               }}
             >
-              <FoodTechLogo />
+              <FoodTechLogo fill={""} />
             </Box>
             <Box flexGrow={1} />
             <Button onClick={info}>More info</Button>

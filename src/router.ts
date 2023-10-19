@@ -7,6 +7,7 @@ export type Path =
   | `/`
   | `/data`
   | `/info`
+  | `/login`
   | `/memberships`
   | `/restaurants`
 
