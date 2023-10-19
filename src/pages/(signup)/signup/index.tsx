@@ -11,8 +11,9 @@ import Divider from "@mui/material/Divider";
 import { useState } from "react";
 import GoogleIcon from "@mui/icons-material/Google";
 
-export default function LoginPage() {
+export default function SignupPage() {
   const [showPassword, setShowPassword] = useState(false);
+  const [showPassword1, setShowPassword1] = useState(false);
 
   return (
     <Box
@@ -31,14 +32,14 @@ export default function LoginPage() {
       }}
     >
       <Typography variant="h5" fontWeight={"bold"}>
-        Login
+        Signup
       </Typography>
 
       <TextField fullWidth id="email" label="Email" variant="outlined" />
 
       <TextField
         type={showPassword ? "text" : "password"}
-        label="Password"
+        label="Create password"
         fullWidth
         InputProps={{
           endAdornment: (
@@ -50,13 +51,27 @@ export default function LoginPage() {
           ),
         }}
       />
-
-      <Button>Forgot Password?</Button>
+      <TextField
+        type={showPassword1 ? "text" : "password"}
+        label="Confirm password"
+        fullWidth
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton onClick={() => setShowPassword1(!showPassword1)}>
+                {showPassword1 ? <VisibilityOff /> : <Visibility />}
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
+      />
 
       <Button fullWidth variant="contained">
-        Login
+        Signup
       </Button>
-      <Typography variant="subtitle2">Don't have an account? Signup</Typography>
+      <Typography variant="subtitle2">
+        Already have an account? Login
+      </Typography>
 
       <Divider />
 

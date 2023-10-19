@@ -10,6 +10,10 @@ export default function UpperBarSection() {
     navigate("/login");
   }
 
+  function signup() {
+    navigate("/signup");
+  }
+
   return (
     <Box>
       <AppBar
@@ -58,7 +62,9 @@ export default function UpperBarSection() {
             <Button variant="outlined" onClick={login}>
               Login
             </Button>
-            <Button variant="contained">Sign Up</Button>
+            <Button variant="contained" onClick={signup}>
+              Sign Up
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
