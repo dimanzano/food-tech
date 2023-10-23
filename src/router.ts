@@ -14,6 +14,7 @@ export type Path =
   | `/settings/invoice`
   | `/settings/user`
   | `/signup`
+  | `/supermarkets`
 
 export type Params = {
   
