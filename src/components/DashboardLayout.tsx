@@ -43,6 +43,7 @@ export function DashboardLayout() {
 
   function settings() {
     navigate("/settings");
+    handleMenuClose();
   }
 
   const handleChipClick = (event: React.MouseEvent<HTMLDivElement>) => {

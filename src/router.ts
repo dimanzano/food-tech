@@ -9,6 +9,7 @@ export type Path =
   | `/info`
   | `/login`
   | `/memberships`
+  | `/payments`
   | `/restaurants`
   | `/settings`
   | `/settings/invoice`
