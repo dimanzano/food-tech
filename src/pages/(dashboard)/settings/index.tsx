@@ -1,8 +1,15 @@
 import { Box, Button, Divider, Typography } from "@mui/material";
 import PaymentIcon from "@mui/icons-material/Payment";
 import AddIcon from "@mui/icons-material/Add";
+import { useNavigate } from "react-router-dom";
 
 export default function SettingsPage() {
+  const navigate = useNavigate();
+
+  function payment() {
+    navigate("/payments");
+  }
+
   return (
     <Box
       sx={{
@@ -60,7 +67,12 @@ export default function SettingsPage() {
             </Typography>
           </Box>
           <Box sx={{ display: "flex", alignItems: "left" }}>
-            <Button startIcon={<AddIcon />} variant="text" size="small">
+            <Button
+              startIcon={<AddIcon />}
+              variant="text"
+              size="small"
+              onClick={payment}
+            >
               Add payment method
             </Button>
           </Box>
