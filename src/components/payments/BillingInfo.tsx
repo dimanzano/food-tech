@@ -35,13 +35,13 @@ export default function BillingInfo() {
               sx={{ width: 250 }}
               variant="standard"
               name="firstName"
-              label="First Name"
+              label="First mame"
             />
             <TextField
               sx={{ width: 250 }}
               variant="standard"
               name="lastName"
-              label="Last Name"
+              label="Last name"
             />
           </Box>
           <TextField variant="standard" name="address" label="Address" />
