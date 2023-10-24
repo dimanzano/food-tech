@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import ProfileSection from "../../../../components/user-management/ProfileSection";
 import PasswordSection from "../../../../components/user-management/PasswordSection";
+import NotificationSection from "../../../../components/user-management/NotificationSection";
 
 export default function SettingsUserPage() {
   return (
@@ -20,6 +21,7 @@ export default function SettingsUserPage() {
       </Typography>
       <ProfileSection />
       <PasswordSection />
+      <NotificationSection />
     </Box>
   );
 }
