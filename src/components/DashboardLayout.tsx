@@ -4,7 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import {
   AppBar,
   Box,
-  Button,
+  Chip,
   Drawer,
   IconButton,
   List,
@@ -12,6 +12,8 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Menu,
+  MenuItem,
   Toolbar,
 } from "@mui/material";
 import { Link, Outlet, useNavigate } from "react-router-dom";
@@ -19,12 +21,14 @@ import { drawerItems } from "../drawerItems";
 import { useNavLink } from "../hooks/useNavLink";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { FoodTechLogo } from "./FoodTechLogo";
+import FaceIcon from "@mui/icons-material/Face";
 
 const drawerWidth = 280;
 
 export function DashboardLayout() {
   const isMobile = useIsMobile();
   const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
@@ -37,9 +41,18 @@ export function DashboardLayout() {
     }
   }, [isMobile]);
 
-  function info() {
-    navigate("/info");
+  function settings() {
+    navigate("/settings");
+    handleMenuClose();
   }
+
+  const handleChipClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <Box display="flex" height="100vh" flexDirection="column">
@@ -77,7 +90,24 @@ export function DashboardLayout() {
               <FoodTechLogo fill={""} />
             </Box>
             <Box flexGrow={1} />
-            <Button onClick={info}>More info</Button>
+            <div>
+              <Chip
+                icon={<FaceIcon />}
+                label={"User"}
+                onClick={handleChipClick}
+                variant="outlined"
+              />
+
+              <Menu
+                id="user-menu"
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleMenuClose}
+              >
+                <MenuItem onClick={settings}>Settings</MenuItem>
+                <MenuItem>Logout</MenuItem>
+              </Menu>
+            </div>
           </Toolbar>
         </AppBar>
         <Toolbar />
