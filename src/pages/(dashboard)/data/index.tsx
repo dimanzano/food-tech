@@ -11,6 +11,9 @@ import Start from "../../../components/Test/Start";
 import Food1 from "../../../components/Test/Food1";
 import Start2 from "../../../components/Test2/Start2";
 import Food2 from "../../../components/Test/Food2";
+import Food3 from "../../../components/Test/Food3";
+import Food4 from "../../../components/Test/Food4";
+
 
 interface StepProps {
   activeStep: number;
@@ -41,11 +44,7 @@ const StepOneA: React.FC<StepProps> = ({ activeStep, handleNext }) => {
   );
 };
 
-const StepOneB: React.FC<StepProps> = ({
-  activeStep,
-  handleNext,
-  handleBack,
-}) => {
+const StepOneB: React.FC<StepProps> = ({ activeStep, handleNext, handleBack,}) => {
   if (activeStep !== 0) return null;
 
   return (
@@ -71,16 +70,64 @@ const StepOneB: React.FC<StepProps> = ({
   );
 };
 
-const StepOneC: React.FC<StepProps> = ({
-  activeStep,
-  handleNext,
-  handleBack,
-}) => {
+const StepOneC: React.FC<StepProps> = ({ activeStep, handleNext, handleBack,}) => {
   if (activeStep !== 0) return null;
 
   return (
     <Box marginTop={2} marginBottom={2}>
       <Food2 />
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        paddingTop={2}
+        gap={2}
+      >
+        <Button variant="outlined" onClick={handleBack}>
+          Back
+        </Button>
+        <Button variant="contained" onClick={handleNext}>
+          Next
+        </Button>
+      </Box>
+    </Box>
+  );
+};
+
+const StepOneD: React.FC<StepProps> = ({ activeStep, handleNext, handleBack,}) => {
+  if (activeStep !== 0) return null;
+
+  return (
+    <Box marginTop={2} marginBottom={2}>
+      <Food3 />
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        paddingTop={2}
+        gap={2}
+      >
+        <Button variant="outlined" onClick={handleBack}>
+          Back
+        </Button>
+        <Button variant="contained" onClick={handleNext}>
+          Next
+        </Button>
+      </Box>
+    </Box>
+  );
+};
+
+const StepOneE: React.FC<StepProps> = ({ activeStep, handleNext, handleBack,}) => {
+  if (activeStep !== 0) return null;
+
+  return (
+    <Box marginTop={2} marginBottom={2}>
+      <Food4 />
       <Box
         sx={{
           display: "flex",
@@ -185,8 +232,18 @@ export default function DataPage() {
       setSubStep(2); // Go to StepOneC
     }
 
-    // If on Step 1C, go to Step 2A
+    // If on Step 1C, go to Step 1D
     else if (activeStep === 0 && subStep === 2) {
+      setSubStep(3); // Go to StepOneD
+    }
+
+    // If on Step 1D, go to Step 1E
+    else if (activeStep === 0 && subStep === 3) {
+      setSubStep(4); // Go to StepOneD
+    }
+
+    // If on Step 1E, go to Step 2A
+    else if (activeStep === 0 && subStep === 4) {
       setActiveStep((prev) => prev + 1);
       setSubStep(0); // Reset substep
     }
@@ -204,6 +261,16 @@ export default function DataPage() {
   };
 
   const handleBack = () => {
+    // If on Step 1E, go back to Step 1D
+    if (activeStep === 0 && subStep === 4) {
+      setSubStep(3);
+    }
+
+    // If on Step 1D, go back to Step 1C
+    if (activeStep === 0 && subStep === 3) {
+      setSubStep(2);
+    }
+    
     // If on Step 1C, go back to Step 1B
     if (activeStep === 0 && subStep === 2) {
       setSubStep(1);
@@ -290,6 +357,25 @@ export default function DataPage() {
             handleReset={handleReset}
           />
         )}
+          
+        {activeStep === 0 && subStep === 3 && (
+          <StepOneD
+            activeStep={activeStep}
+            handleNext={handleNext}
+            handleBack={handleBack}
+            handleReset={handleReset}
+          />
+        )}
+
+        {activeStep === 0 && subStep === 4 && (
+          <StepOneE
+            activeStep={activeStep}
+            handleNext={handleNext}
+            handleBack={handleBack}
+            handleReset={handleReset}
+          />
+        )}
+
         {activeStep === 1 && subStep === 0 && (
           <StepTwoA
             activeStep={activeStep}
