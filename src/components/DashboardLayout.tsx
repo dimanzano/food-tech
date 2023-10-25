@@ -46,6 +46,11 @@ export function DashboardLayout() {
     handleMenuClose();
   }
 
+  function memberships() {
+    navigate("/memberships");
+    handleMenuClose();
+  }
+
   const handleChipClick = (event: React.MouseEvent<HTMLDivElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -105,6 +110,7 @@ export function DashboardLayout() {
                 onClose={handleMenuClose}
               >
                 <MenuItem onClick={settings}>Settings</MenuItem>
+                <MenuItem onClick={memberships}>Memberships</MenuItem>
                 <MenuItem>Logout</MenuItem>
               </Menu>
             </div>

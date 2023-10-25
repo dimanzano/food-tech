@@ -10,6 +10,10 @@ export default function SettingsPage() {
     navigate("/payments");
   }
 
+  function memberships() {
+    navigate("/memberships");
+  }
+
   return (
     <Box
       sx={{
@@ -42,7 +46,7 @@ export default function SettingsPage() {
           <Typography variant="body1"> $9.99/month</Typography>
 
           <Box sx={{ display: "flex", flexDirection: "row", gap: 1 }}>
-            <Button sx={{ mr: 1 }} variant="contained">
+            <Button sx={{ mr: 1 }} variant="contained" onClick={memberships}>
               Upgrade Plan
             </Button>
             <Button variant="outlined">Cancel Plan</Button>
