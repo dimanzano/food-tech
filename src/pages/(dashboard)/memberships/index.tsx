@@ -45,7 +45,9 @@ export default function MembershipsPage() {
         alignItems: "center",
       }}
     >
-      <Typography variant="h5">Membership Plans</Typography>
+      <Typography variant="h5" fontWeight={"bold"}>
+        Membership Plans
+      </Typography>
       <Box
         sx={{
           display: "flex",
@@ -100,7 +102,7 @@ export default function MembershipsPage() {
             <Box sx={{ flex: 1 }} />
             <CardActions>
               <Button size="small" variant="outlined">
-                Choose Plan
+                View Plan
               </Button>
             </CardActions>
           </Card>
