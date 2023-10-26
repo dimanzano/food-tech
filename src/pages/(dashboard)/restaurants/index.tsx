@@ -15,6 +15,10 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { restaurantData } from "../../../mockData";
+import PinDropIcon from "@mui/icons-material/PinDrop";
+import StarIcon from "@mui/icons-material/Star";
+import ListIcon from "@mui/icons-material/List";
+import InsightsIcon from "@mui/icons-material/Insights";
 
 interface Restaurant {
   id: number;
@@ -61,10 +65,14 @@ export default function RestaurantsPage() {
         variant="fullWidth"
         aria-label="restaurant tabs"
       >
-        <Tab label="Nearby" />
-        <Tab label="Based on Tests" />
-        <Tab label="Best Sellers" />
-        <Tab label="All" />
+        <Tab
+          icon={<InsightsIcon />}
+          iconPosition="start"
+          label="Based on Tests"
+        />
+        <Tab icon={<PinDropIcon />} iconPosition="start" label="Nearby" />
+        <Tab icon={<StarIcon />} iconPosition="start" label="Best Sellers" />
+        <Tab icon={<ListIcon />} iconPosition="start" label="All" />
       </Tabs>
 
       <Grid container spacing={3} marginTop={1}>
