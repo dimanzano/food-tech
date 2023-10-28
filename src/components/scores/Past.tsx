@@ -9,6 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import FoodScore from "./FoodScore";
 
 const foodData = [
   { name: "Spicy", uv: 400, amt: 2400 },
@@ -33,6 +34,7 @@ const qualityData = [
 export default function PastSection() {
   return (
     <Box marginTop={2} sx={{ height: "50vh", width: "90%" }}>
+      <FoodScore />
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={foodData}

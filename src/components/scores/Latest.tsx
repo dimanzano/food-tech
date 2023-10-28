@@ -9,6 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import FoodScore from "./FoodScore";
 
 const foodData = [
   { name: "Spicy", uv: 400, amt: 2400 },
@@ -34,6 +35,7 @@ const qualityData = [
 export default function LatestSection() {
   return (
     <Box marginTop={2} sx={{ height: "50vh", width: "90%" }}>
+      <FoodScore />
       <Typography variant="h6" fontWeight={"bold"}>
         Food Types
       </Typography>
