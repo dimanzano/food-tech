@@ -10,17 +10,17 @@ export default function Food2() {
   return (
     <Card
       sx={{ width: 650, height: 400, padding: 7 }}
-      style={{ backgroundColor: "rgb(32,32,32 )" }}
+      style={{ backgroundColor: "rgb(152,94,180)" }}
     >
       <CardMedia
         component="img"
         height="200"
-        image="/src/assets/images/image.png"
+        image="/src/assets/images/Img2.jpg"
         alt="food"
       />
       <CardContent>
-        <Typography variant="h6" component="div">
-          Title
+        <Typography variant="h4" component="div" color="White" align='center'>
+          SWEET FOOD
         </Typography>
         <Slider
           defaultValue={30}

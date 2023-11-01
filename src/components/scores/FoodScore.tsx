@@ -7,7 +7,7 @@ import {
   Pagination,
   CardContent,
 } from "@mui/material";
-import { supermarketData } from "../../mockData";
+import { supermarketData } from "../../mockData/supermarketData";
 import { useState } from "react";
 
 interface FoodCardProps {
