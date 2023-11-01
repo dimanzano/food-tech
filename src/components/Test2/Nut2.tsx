@@ -6,21 +6,21 @@ import {
     CardMedia,
   } from "@mui/material";
   
-  export default function Food4() {
+  export default function Nut2() {
     return (
       <Card
         sx={{ width: 650, height: 400, padding: 7 }}
-        style={{ backgroundColor: "rgb(255,179,108)" }}
+        style={{ backgroundColor: "rgb(136,183,238)" }}
       >
         <CardMedia
           component="img"
           height="200"
-          image="/src/assets/images/Img4.jpg"
+          image="/src/assets/images/Img6.jpg"
           alt="food"
         />
         <CardContent>
-          <Typography variant="h4" component="div" color="White" align='center'>
-            SALTY FOOD
+          <Typography variant="h4" component="div" color="white" align='center'>
+            HYGIENE AND STANDARDS
           </Typography>
           <Slider
             defaultValue={30}

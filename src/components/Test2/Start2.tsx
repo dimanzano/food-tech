@@ -12,7 +12,7 @@ export default function Start2() {
           sx={{ whiteSpace: "pre-wrap" }}
           margin={2}>
           2) We will introduce you to food quality assessment techniques, and you will be asked to provide a rating
-          from 1 to 5 based on what you consider to be most important when consuming or purchasing food at that moment.
+          from 10 to 100 based on what you consider to be most important when consuming or purchasing food at that moment.
         </Typography>
         <Typography 
           variant="h6" 
