@@ -15,17 +15,20 @@
     "@fontsource/inter": "^5.0.12",
     "@generouted/react-router": "^1.15.9",
     "@mui/icons-material": "^5.14.12",
+    "@mui/lab": "5.0.0-alpha.149",
     "@mui/material": "^5.14.12",
+    "jsx-runtime": "^1.2.0",
     "markdown-to-jsx": "^7.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
     "react-router-hash-link": "^2.4.3",
-    "react-scroll": "^1.9.0"
+    "react-scroll": "^1.9.0",
+    "recharts": "^2.9.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
     "@types/react-router-hash-link": "^2.4.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",

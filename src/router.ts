@@ -9,8 +9,13 @@ export type Path =
   | `/info`
   | `/login`
   | `/memberships`
+  | `/payments`
   | `/restaurants`
+  | `/settings`
+  | `/settings/invoice`
+  | `/settings/user`
   | `/signup`
+  | `/supermarkets`
 
 export type Params = {
   
