@@ -10,11 +10,11 @@ interface Restaurant {
 export const restaurantData: Restaurant[] = [
   {
     id: 1,
-    name: "Restaurant 1",
+    name: "Cafe Concordia",
     image: "/src/assets/images/restaurants/breakfast-rest.png",
     description: "This is a description for Restaurant 1",
-    specialties: ["Specialty 1"],
-    address: "Bürgermeister-Smidt-Straße 82, 28195 Bremen",
+    specialties: ["Great Breakfasts", "Specialty Coffee"],
+    address: "Schwachhauser Heerstraße 17, 28203 Bremen",
   },
   {
     id: 2,
