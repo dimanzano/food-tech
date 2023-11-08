@@ -86,5 +86,109 @@ interface Supermarket {
         rating: 7,
   
       },
+      {
+        id: 11,
+        name: "Donuts",
+        image:  "/src/assets/images/supermarket/oyster-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 9,
+  
+      },
+      {
+        id: 12,
+        name: "Oyster",
+        image:  "/src/assets/images/supermarket/donut-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 7,
+  
+      },
+      {
+        id: 13,
+        name: "Cheese",
+        image:  "/src/assets/images/supermarket/cheese-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 9,
+  
+      },
+      {
+        id: 14,
+        name: "Lentils",
+        image:  "/src/assets/images/supermarket/lentils-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 7,
+  
+      },
+      {
+        id: 15,
+        name: "Pork",
+        image:  "/src/assets/images/supermarket/pork-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 9,
+  
+      },
+      {
+        id: 16,
+        name: "Spices",
+        image:  "/src/assets/images/supermarket/spices-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 7,
+  
+      },
+      {
+        id: 17,
+        name: "Chili",
+        image:  "/src/assets/images/supermarket/chili-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 9,
+  
+      },
+      {
+        id: 18,
+        name: "Pasta",
+        image:  "/src/assets/images/supermarket/pasta-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 7,
+  
+      },
+      {
+        id: 19,
+        name: "Potato",
+        image:  "/src/assets/images/supermarket/potato-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 7,
+  
+      },
+      {
+        id: 20,
+        name: "Coconut Oil",
+        image:  "/src/assets/images/supermarket/cocoOil-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 7,
+  
+      },
+      {
+        id: 21,
+        name: "Kiwi",
+        image:  "/src/assets/images/supermarket/kiwi-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 9,
+  
+      },
+      {
+        id: 22,
+        name: "Lemon",
+        image:  "/src/assets/images/supermarket/lemon-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 7,
+  
+      },
+      {
+        id: 23,
+        name: "Olive Oil",
+        image:  "/src/assets/images/supermarket/oliveOil-food.jpg",
+        description: "This is a description for Restaurant 6",
+        rating: 7,
+  
+      },
   ];
   
