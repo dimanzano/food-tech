@@ -19,6 +19,7 @@ import PinDropIcon from "@mui/icons-material/PinDrop";
 import StarIcon from "@mui/icons-material/Star";
 import ListIcon from "@mui/icons-material/List";
 import InsightsIcon from "@mui/icons-material/Insights";
+import { useIsMobile } from "../../../hooks";
 
 interface Restaurant {
   id: number;
@@ -30,6 +31,8 @@ interface Restaurant {
 }
 
 export default function RestaurantsPage() {
+  const isMobile = useIsMobile();
+
   const [selectedRestaurant, setSelectedRestaurant] =
     useState<Restaurant | null>(null);
   const [selectedTab, setSelectedTab] = useState(0);
@@ -62,8 +65,16 @@ export default function RestaurantsPage() {
       <Tabs
         value={selectedTab}
         onChange={handleTabChange}
-        variant="fullWidth"
+        variant={isMobile ? "scrollable" : "fullWidth"}
         aria-label="restaurant tabs"
+        sx={{
+          mb: 2,
+          borderBottom: 1,
+          borderColor: "grey.200",
+          width: isMobile ? "320px" : "auto",
+        }}
+        scrollButtons={isMobile ? "auto" : false}
+        allowScrollButtonsMobile={isMobile}
       >
         <Tab
           icon={<InsightsIcon />}

@@ -20,6 +20,7 @@ import PinDropIcon from "@mui/icons-material/PinDrop";
 import StarIcon from "@mui/icons-material/Star";
 import ListIcon from "@mui/icons-material/List";
 import InsightsIcon from "@mui/icons-material/Insights";
+import { useIsMobile } from "../../../hooks";
 
 interface Supermarket {
   id: number;
@@ -29,6 +30,7 @@ interface Supermarket {
 }
 
 export default function SupermarketsPage() {
+  const isMobile = useIsMobile();
   const [favorites, setFavorites] = useState<number[]>([]);
   const [selectedTab, setSelectedTab] = useState(0);
   const [selectedFood, setSelectedFood] = useState<Supermarket | null>(null);
@@ -60,8 +62,16 @@ export default function SupermarketsPage() {
       <Tabs
         value={selectedTab}
         onChange={handleTabChange}
-        variant="fullWidth"
-        aria-label="restaurant tabs"
+        variant={isMobile ? "scrollable" : "fullWidth"}
+        aria-label="supermarket tabs"
+        sx={{
+          mb: 2,
+          borderBottom: 1,
+          borderColor: "grey.200",
+          width: isMobile ? "320px" : "auto",
+        }}
+        scrollButtons={isMobile ? "auto" : false}
+        allowScrollButtonsMobile={isMobile}
       >
         <Tab
           icon={<InsightsIcon />}
@@ -73,7 +83,12 @@ export default function SupermarketsPage() {
         <Tab icon={<ListIcon />} iconPosition="start" label="All" />
       </Tabs>
 
-      <Grid container spacing={3} marginTop={1}>
+      <Grid
+        container
+        spacing={3}
+        marginTop={1}
+        justifyContent={isMobile ? "center" : "flex-start"}
+      >
         {supermarketData.map((food) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={food.id}>
             <Card sx={{ position: "relative", maxWidth: 300, height: 330 }}>
