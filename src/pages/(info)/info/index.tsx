@@ -4,15 +4,24 @@ import TuneIcon from "@mui/icons-material/Tune";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Footer from "../../../components/info/Footer";
+import { useIsMobile } from "../../../hooks/useIsMobile";
 
 export default function InfoPage() {
+  const isMobile = useIsMobile();
+
   return (
     <Box>
       <UpperBarSection />
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: isMobile ? "column" : "row",
+          alignItems: "center",
+        }}
+      >
         <Box
           sx={{
-            width: "50%",
+            width: isMobile ? "100%" : "70%",
             padding: "60px",
             marginTop: "60px",
           }}
@@ -20,7 +29,7 @@ export default function InfoPage() {
           <img src="/src/assets/images/beef.png" alt="beef" width="100%" />
         </Box>
 
-        <Box sx={{ width: "50%", padding: "40px" }}>
+        <Box sx={{ width: isMobile ? "100%" : "50%", padding: "40px" }}>
           <Typography variant="h4">Lorem ipsum dolor</Typography>
           <Typography marginBottom={5}>Lorem ipsum</Typography>
 
@@ -38,7 +47,15 @@ export default function InfoPage() {
       {/* Landscape Page Sections */}
       <Box
         id="about-us"
-        sx={{ p: 4, backgroundColor: "grey.300", textAlign: "center" }}
+        sx={{
+          p: 4,
+          backgroundColor: "grey.300",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: isMobile ? "column" : "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
         <Typography variant="h4">About Us</Typography>
 
@@ -80,7 +97,7 @@ export default function InfoPage() {
         sx={{
           p: 4,
           backgroundColor: "grey.200",
-          paddingX: "80px",
+          paddingX: isMobile ? "20px" : "80px",
         }}
       >
         <Box textAlign="center" marginBottom={2}>
@@ -114,8 +131,16 @@ export default function InfoPage() {
         </Typography>
       </Box>
 
-      <Box id="contact" sx={{ display: "flex" }}>
-        <Box sx={{ width: "35%", backgroundColor: "rgb(202, 65, 56)" }}>
+      <Box
+        id="contact"
+        sx={{ display: "flex", flexDirection: isMobile ? "column" : "row" }}
+      >
+        <Box
+          sx={{
+            width: isMobile ? "100%" : "35%",
+            backgroundColor: "rgb(202, 65, 56)",
+          }}
+        >
           <Typography
             variant="h2"
             margin={4}
@@ -127,28 +152,47 @@ export default function InfoPage() {
         </Box>
 
         {/* Form Section */}
-        <Box sx={{ width: "50%", p: 3, margin: 5 }} justifyContent={"center"}>
+        <Box
+          sx={{
+            width: isMobile ? "100%" : "35%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            p: 2,
+          }}
+        >
           <Box
             component="form"
             sx={{
               width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
 
-              "& .MuiTextField-root": { m: 1.5, width: "30ch" },
+              "& .MuiTextField-root": {
+                m: 1.5,
+                width: isMobile ? "90%" : "100%",
+              },
             }}
           >
-            <div>
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <TextField
                 id="first-name"
                 variant="standard"
                 label="First Name"
               />
-
               <TextField id="last-name" variant="standard" label="Last Name" />
-
               <TextField id="email" variant="standard" label="Email" />
-
               <TextField id="phone" variant="standard" label="Phone" />
-            </div>
+            </Box>
           </Box>
           <Box m={1.5}>
             <TextField

@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { supermarketData } from "../../mockData/supermarketData";
 import { useState } from "react";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 interface FoodCardProps {
   image: string;
@@ -27,8 +28,9 @@ const FoodCard: React.FC<FoodCardProps> = ({ image, name }) => {
 };
 
 export default function FoodScore() {
+  const isMobile = useIsMobile();
   const [page, setPage] = useState(1);
-  const itemsPerPage = 4;
+  const itemsPerPage = isMobile ? 3 : 4;
 
   const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
@@ -46,7 +48,7 @@ export default function FoodScore() {
       </Typography>
       <Grid container spacing={2} justifyContent="center">
         {pagedData.map((food) => (
-          <Grid item xs={3} key={food.id}>
+          <Grid item xs={isMobile ? 6 : 3} key={food.id}>
             <FoodCard image={food.image} name={food.name} />
           </Grid>
         ))}

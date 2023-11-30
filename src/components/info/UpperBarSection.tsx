@@ -1,10 +1,20 @@
-import { AppBar, Box, Button, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  Toolbar,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { FoodTechLogo } from "../FoodTechLogo";
 import { HashLink as Link } from "react-router-hash-link";
 import { useNavigate } from "react-router-dom";
 
 export default function UpperBarSection() {
   const navigate = useNavigate();
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   function login() {
     navigate("/login");
@@ -38,11 +48,9 @@ export default function UpperBarSection() {
           >
             <FoodTechLogo fill={""} />
           </Box>
-          <Box flexGrow={1} />
-
           <Box
             flexGrow={8}
-            display="flex"
+            display={isMobile ? "none" : "flex"}
             justifyContent="center"
             alignItems="center"
             gap={2}
@@ -57,7 +65,7 @@ export default function UpperBarSection() {
               Contact
             </Link>
           </Box>
-
+          <Box flexGrow={1} /> {/* This Box will take up any remaining space */}
           <Box flexDirection={"row"} gap={1.5} display={"flex"}>
             <Button variant="outlined" onClick={login}>
               Login

@@ -5,11 +5,16 @@ import {
   Slider,
   CardMedia,
 } from "@mui/material";
+import { useIsMobile } from "../../hooks";
 
 export default function Food1() {
+  const isMobile = useIsMobile();
+  const cardWidth = isMobile ? 300 : 650;
+  const variant = isMobile ? "h5" : "h4";
+
   return (
     <Card
-      sx={{ width: 650, height: 400, padding: 7 }}
+      sx={{ width: cardWidth, height: 400, padding: 7 }}
       style={{ backgroundColor: "rgb(255,80,70)" }}
     >
       <CardMedia
@@ -19,7 +24,12 @@ export default function Food1() {
         alt="food"
       />
       <CardContent>
-        <Typography variant="h4" component="div" color="white" align='center'>
+        <Typography
+          variant={variant}
+          component="div"
+          color="white"
+          align="center"
+        >
           SPICY FOOD
         </Typography>
         <Slider
