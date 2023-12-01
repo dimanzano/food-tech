@@ -379,17 +379,17 @@ export default function DataPage() {
     }
 
     // If on Step 1D, go back to Step 1C
-    if (activeStep === 0 && subStep === 3) {
+    else if (activeStep === 0 && subStep === 3) {
       setSubStep(2);
     }
     
     // If on Step 1C, go back to Step 1B
-    if (activeStep === 0 && subStep === 2) {
+    else if (activeStep === 0 && subStep === 2) {
       setSubStep(1);
     }
 
     // If on Step 1B, go back to Step 1A
-    if (activeStep === 0 && subStep === 1) {
+    else if (activeStep === 0 && subStep === 1) {
       setSubStep(0);
     }
 
@@ -422,7 +422,7 @@ export default function DataPage() {
     // If on Step 2A, go back to Step 1B
     else if (activeStep === 1 && subStep === 0) {
       setActiveStep((prev) => prev - 1);
-      setSubStep(1);
+      setSubStep(4);
     }
 
     // Else, go back one main step
