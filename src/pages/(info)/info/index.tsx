@@ -30,8 +30,8 @@ export default function InfoPage() {
         </Box>
 
         <Box sx={{ width: isMobile ? "100%" : "50%", padding: "40px" }}>
-          <Typography variant="h4">Lorem ipsum dolor</Typography>
-          <Typography marginBottom={5}>Lorem ipsum</Typography>
+          <Typography variant="h4">Hello! Welcome to FoodTech!</Typography>
+          <Typography marginBottom={5}>We're thrilled to have you on board. </Typography>
 
           <Box flexDirection={"row"} gap={1.5} display={"flex"}>
             <Button variant="contained" color="success">
@@ -63,30 +63,33 @@ export default function InfoPage() {
           {/* Column 1 */}
           <Box sx={{ textAlign: "center", padding: "20px" }}>
             <TuneIcon sx={{ fontSize: 80 }} color="success" />
-            <Typography variant="h6">Title 1</Typography>
+            <Typography variant="h6">Here for you</Typography>
             <Typography variant="body1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-              ipsam? it amet consectetur adipisicing elit.{" "}
+            Adjust your preferences, explore new flavors,
+            and tailor your meals to reflect your unique tastes{" "}
             </Typography>
           </Box>
 
           {/* Column 2 */}
           <Box sx={{ textAlign: "center", padding: "20px" }}>
             <FastfoodIcon sx={{ fontSize: 80 }} />
-            <Typography variant="h6">Title 2</Typography>
+            <Typography variant="h6">Food Habits</Typography>
             <Typography variant="body1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-              ipsam? it amet consectetur adipisicing elit.{" "}
+            Our detailed descriptions and ingredient insights empower you 
+            to know exactly what you're indulging in. 
+            We believe that informed choices lead to a 
+            healthier relationship with food.{" "}
             </Typography>
           </Box>
 
           {/* Column 3 */}
           <Box sx={{ textAlign: "center", padding: "20px" }}>
             <FavoriteIcon sx={{ fontSize: 80 }} color="error" />
-            <Typography variant="h6">Title 3</Typography>
+            <Typography variant="h6">Community</Typography>
             <Typography variant="body1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-              ipsam? it amet consectetur adipisicing elit.{" "}
+              We're not just about meals; we're about building 
+              a community that celebrates good food and healthy
+              living. Together, we can create a culture of mindful eating{" "}
             </Typography>
           </Box>
         </Box>
@@ -105,11 +108,10 @@ export default function InfoPage() {
         </Box>
 
         <Typography variant="body2">
-          Lorem ipsum dolor sit amet consectetur. Potenti nunc ultricies
-          pharetra fames consequat. Gravida penatibus sagittis fermentum eu
-          egestas at id tristique. In phasellus pharetra fames nunc purus diam
-          porttitor. Lectus erat in rhoncus parturient proin. Ultrices turpis in
-          risus lacus mattis arcu amet in.
+        Before we dive into the delectable world of personalized recommendations,
+         we have a quick treat for you! Complete two fun and insightful tests that 
+         explore your food preferences and tastes. These tests will help us understand your palate better,
+         ensuring that every recommendation is a delightful match for your unique cravings.
         </Typography>
 
         <Box>
@@ -123,11 +125,8 @@ export default function InfoPage() {
         </Box>
 
         <Typography variant="body2">
-          Lorem ipsum dolor sit amet consectetur. Potenti nunc ultricies
-          pharetra fames consequat. Gravida penatibus sagittis fermentum eu
-          egestas at id tristique. In phasellus pharetra fames nunc purus diam
-          porttitor. Lectus erat in rhoncus parturient proin. Ultrices turpis in
-          risus lacus mattis arcu amet in.
+        If you ever have any concerns, 
+        questions, or simply want to share your thoughts, don't hesitate to reach out. 
         </Typography>
       </Box>
 
@@ -147,7 +146,7 @@ export default function InfoPage() {
             color={"white"}
             fontWeight={"bold"}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Your satisfaction is our priority!
           </Typography>
         </Box>
 
